@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0b0907">
+<title>The Mansion — Memory 05</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#d8d0c1;background:radial-gradient(circle at 50% 10%,rgba(132,105,69,.14),transparent 30%),linear-gradient(180deg,#15110d 0%,#0b0907 55%,#080706 100%);font-family:Georgia,"Times New Roman",serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.1;background-image:radial-gradient(#c9bba0 .45px,transparent .45px);background-size:5px 5px}
+.shell{width:100%;max-width:470px;min-height:100vh;margin:auto;padding:24px 20px 34px}
+.top{display:flex;justify-content:space-between;color:#756d60;font:9px Arial,sans-serif;letter-spacing:2.5px}
+.status{border:1px solid #5a5145;padding:5px 7px;color:#9a8e7c}
+.lock{min-height:calc(100vh - 58px);display:flex;flex-direction:column;justify-content:center}
+.mark{text-align:center;color:#827565;font-size:13px;margin-bottom:18px}
+h1{text-align:center;font-size:36px;font-weight:normal;letter-spacing:5px;margin:0;color:#ddd5c7}
+.sub{text-align:center;font:10px Arial,sans-serif;letter-spacing:4px;color:#746c60;margin-top:12px}
+.divider{width:70px;height:1px;background:#625849;margin:34px auto}
+h2{text-align:center;font-size:22px;letter-spacing:3px;font-weight:normal;margin:0 0 12px}
+.intro{text-align:center;color:#81796d;font-size:13px;line-height:1.7;margin:0 auto 34px;max-width:300px}
+label{display:block;color:#766e62;font:9px Arial,sans-serif;letter-spacing:2.5px;margin-bottom:9px}
+input{width:100%;height:56px;background:#100e0c;border:1px solid #4e463b;color:#e4dccd;text-align:center;font:15px Arial,sans-serif;letter-spacing:2px;outline:none}
+input:focus{border-color:#81725f;box-shadow:0 0 0 2px #81725f18}
+button{width:100%;height:54px;margin-top:13px;background:#c9bdab;border:1px solid #c9bdab;color:#17130f;font:bold 10px Arial,sans-serif;letter-spacing:3px;cursor:pointer}
+.message{height:22px;text-align:center;margin-top:12px;color:#9a8068;font:9px Arial,sans-serif;letter-spacing:1.5px}
+.story{display:none;padding-top:25px}.story.show{display:block}
+.recovered{text-align:center;color:#9b8d7a;font:9px Arial,sans-serif;letter-spacing:3px}
+.story h2{font-size:29px;margin:12px 0 8px}
+.date{text-align:center;color:#6e665b;font:9px Arial,sans-serif;letter-spacing:2px}
+.paper{margin-top:38px;padding:26px 20px 30px;border:1px solid #40392f;background:linear-gradient(145deg,#17130f,#0f0d0a);box-shadow:0 18px 45px #0008}
+.chapter{font:10px Georgia,"Times New Roman",serif;letter-spacing:2px;color:#897b68;margin:38px 0 28px;text-align:center;white-space:nowrap}
+.lead{font-size:21px;line-height:1.55;margin:0 0 28px;color:#e1d8c8}
+p{font-size:16px;line-height:1.9;color:#c2b9aa;margin:0 0 24px}
+.quote{border-left:1px solid #776957;padding:9px 0 9px 16px;color:#d8cdbb;font-style:italic}
+.final{margin-top:34px;padding-top:28px;border-top:1px solid #40392f;text-align:center;font-size:19px;line-height:1.65;font-style:italic;color:#e2d6c3}
+.end{text-align:center;color:#6e665b;font:8px Arial,sans-serif;letter-spacing:3px;margin:30px 0 22px}
+@media(max-width:360px){h1{font-size:30px}.story h2{font-size:25px}.paper{padding:22px 16px}p{font-size:15px}}
+</style>
+</head>
+<body>
+<main class="shell">
+<div id="lock" class="lock">
+<div class="top"><span>THE MANSION</span><span class="status">SEALED</span></div>
+<div class="mark">✦</div>
+<h1>MEMORY 05</h1>
+<div class="sub">PRIVATE MEMORY ARCHIVE</div>
+<div class="divider"></div>
+<h2>MEMORY LOCKED</h2>
+<p class="intro">This memory has been sealed away.<br>Only the correct key can recover it.</p>
+<label for="password">ENTER PASSWORD</label>
+<input id="password" type="text" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="ENTER KEY">
+<button onclick="unlock()">UNLOCK MEMORY</button>
+<div id="message" class="message"></div>
+</div>
+
+<section id="story" class="story">
+<div class="top"><span>THE MANSION</span><span class="status">RECOVERED</span></div>
+<div class="recovered">MEMORY RECOVERED</div>
+<h2>MEMORY 05</h2>
+<div class="date">ARCHIVE RECORD // UNKNOWN DATE</div>
+<article class="paper">
+<p class="lead">Disappointment after disappointment slowly wore me down.</p>
+<p>I tried to be the child my parents wanted.<br>I tried to be a good friend.<br>I tried to be someone worth staying for.</p>
+<p>But every time I trusted someone, I ended up hurt.</p>
+<p>One night, I sat alone in my room and looked at the things I had kept over the years — my drawings, my school results, photographs, and little memories.<br>They were supposed to make me happy.<br>Instead, they only reminded me of everything I had lost.</p>
+<p>I asked myself:</p>
+<p class="quote">“Why do I keep expecting?”<br>“Why do I keep trusting people?”</p>
+<p>I had no answer.<br>So I put everything into a box.</p>
+<p>My drawings.<br>My results.<br>My photographs.<br>Every memory I couldn't bear to look at anymore.</p>
+<p>I knew that once I closed the box, I would be locking away the good memories too.</p>
+<p>I whispered,</p>
+<p class="quote">“I'm sorry. I really don't want to do this anymore.”</p>
+<p>Then I closed the box.<br>And locked it.</p>
+<p>From that day on, I stopped expecting people to stay.<br>I told myself:</p>
+<p class="quote">“If I expect nothing, I can never be disappointed.”</p>
+<p class="final">But I didn't realize...<br>I wasn't just locking away my memories.<br>I was locking away myself.</p>
+
+<div class="chapter">──────────── ✦ ────────────</div>
+
+<p>After I locked away my final memory, I thought I could finally forget.</p>
+<p>The people who hurt me.<br>The things that disappointed me.<br>The moments I never wanted to remember.</p>
+<p>I told myself:</p>
+<p class="quote">“The past doesn't matter anymore.”</p>
+<p>But I was wrong.<br>The memories I buried never disappeared.<br>They became doors.</p>
+<p>One door led to my childhood.<br>Another led to my school.<br>Another led to the living room where I used to wait for my parents.<br>Another led to the friend who once chose me.</p>
+<p>Room after room.<br>Memory after memory.</p>
+<p>Until they became something much bigger.</p>
+<p class="lead">A Mansion.</p>
+<p>I had forgotten why it existed.<br>I had forgotten what the rooms meant.<br>I only knew one thing:</p>
+<p class="quote">This was my home.</p>
+<p>Then, one day, people began entering the Mansion.<br>They came looking for a way out.</p>
+<p>I watched them from the shadows.<br>I didn't know why I kept them there.</p>
+<p>I didn't know why the Mansion created trials for them.<br>But every time they found a Memory Archive, I felt something I couldn't explain.</p>
+<p class="final">Those memories...<br><br>i had forgotten them.</p>
+</article>
+<div class="end">END OF MEMORY 05</div>
+</section>
+</main>
+
+<script>
+const password=document.getElementById("password");
+function unlock(){
+ const message=document.getElementById("message");
+ if(password.value.trim().toLowerCase()==="thank you for not leaving me behind"){
+   document.getElementById("lock").style.display="none";
+   document.getElementById("story").classList.add("show");
+   window.scrollTo(0,0);
+ }else{
+   message.textContent="MEMORY NOT FOUND — TRY AGAIN";
+   password.value="";
+   password.focus();
+ }
+}
+password.addEventListener("keydown",e=>{if(e.key==="Enter")unlock()});
+</script>
+</body>
+</html>
